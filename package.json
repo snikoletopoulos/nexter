@@ -1,0 +1,31 @@
+{
+	"name": "nexter",
+	"version": "1.0.0",
+	"author": "Stavros Nikoletopoulos",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "sass -w sass/main.scss public/css/main.css",
+		"optimize:css": "postcss --replace public/css/main.css",
+		"build": "sass sass/main.scss public/css/main.css && npm run optimize:css",
+		"format": "prettier --write ./public/*.html ./sass/**/*.scss",
+		"lint": "stylelint ./sass",
+		"dev": "concurrently --kill-others -c magenta,cyan -n sass,server \"npm run watch:sass\" \"npm run serve\"",
+		"serve": "live-server --no-css-inject --port=3000 --no-browser public"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.19",
+		"concurrently": "^9.1.2",
+		"cssnano": "^7.0.1",
+		"live-server": "^1.2.2",
+		"postcss-cli": "^11.0.0",
+		"prettier": "^3.2.5",
+		"sass": "^1.83.4",
+		"stylelint": "^16.6.1"
+	},
+	"browserslist": [
+		"last 1 version",
+		"> 1%",
+		"not dead"
+	]
+}

@@ -1,0 +1,20 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# CSS compiled files
+/public/css/main.css
+/public/css/main.css.map
+
+# VS code files
+/.vscode
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
