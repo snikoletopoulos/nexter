@@ -2,6 +2,7 @@
 	"name": "nexter",
 	"version": "1.0.0",
 	"author": "Stavros Nikoletopoulos",
+	"type": "module",
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
